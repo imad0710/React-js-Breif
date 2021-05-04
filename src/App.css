@@ -82,10 +82,9 @@ li{
 
 }
 .menu{
-  background-image: url("./Bg.jpg");
+  background-color: rgb(255, 255, 255);
   
-  background-repeat: no-repeat;
-  background-size: cover;
+  
 }
 .afficher{
   background-color: #282c34;
@@ -160,4 +159,9 @@ li{
 }
 .S{
   width: 270px;
+}
+.compenent{
+  background-image: url('bg3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
