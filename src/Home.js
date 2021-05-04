@@ -38,7 +38,7 @@ export class Home extends Component{
             <div className="row">
               {this.state.obj.map((gitDATA) => (
                 <div className="col-md-4">
-                  <div className="card text-white bg-secondary mb-3">
+                  <div className="card S mx-4 col-md-3 my-2">
                     <img
                       className="card-img-top"
                       src={gitDATA.strMealThumb}

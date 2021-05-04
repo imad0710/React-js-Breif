@@ -2,6 +2,8 @@
 import React, { Component } from 'react'
 
 import axios from 'axios'
+import './App.css'
+
 
 export class Menu extends Component {
 
@@ -24,19 +26,18 @@ export class Menu extends Component {
 
         return (
 
-
+      
             <div className="container-fluid menu">
-
                 <div className="row">
                     {this.state.menu.map(res => (
                         <div className="col-lg-3 col-md-6 mt-5">
 
-                            <div className="card text-white bg-secondary mb-3">
+                            <div className="card S mx-4 col-md-3 my-2">
                                 <img className="card-img-top" src={res.strMealThumb} alt="" />
                                 <div className="card-body">
                                     <h4 className="card-title">{res.strMeal}</h4>
                                     <p className="card-text">
-                                        <a href={res.strYoutube} className="btn btn-success">show more</a>
+                                        <a href={'/Detail/' + res.idMeal} className="btn btn-success">show more</a>
 
                                     </p>
                                 </div>
@@ -49,7 +50,7 @@ export class Menu extends Component {
                 </div>
             </div>
 
-
+  
         )
     }
 }

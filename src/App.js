@@ -3,9 +3,13 @@ import React from 'react';
 import './App.css';
 import Logo from './logo.PNG';
 import Home from './Home';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Menu from './Menu';
 import Favorites from './Favorites';
+import Footer from './Footer';
+import Detail from './Detail';
+
+
 function App() {
   
   return (
@@ -32,12 +36,17 @@ function App() {
       </div>
       </div>
         </nav>
-        
+    
         <Route path="/" exact component={Home} />
         <Route path="/Menu"exact component={Menu} />
         <Route path="/Favorites"exact component={Favorites} />
+        <Route path="/Detail/:login" exact component={Detail}/>
+
+      
     </div>
+    <Footer/>
     </Router>
+    
   );
 }
 

@@ -3,16 +3,16 @@ import './App.css';
 
 export class Searsh extends Component {
   state = {
-    ggg: '',
+    Search: '',
   };
   handleForm = (e) => {
     this.setState({
-      ggg: e.target.value,
+      Search: e.target.value,
     });
   };
   searsh = (event) => {
     event.preventDefault();
-    this.props.getSearsh(this.state.ggg);
+    this.props.getSearsh(this.state.Search);
   };
   render() {
     return (
@@ -21,7 +21,7 @@ export class Searsh extends Component {
           <div class="d-flex  justify-content-center h-100"> 
             <form class="d-flex input justify-content-center" onSubmit={this.searsh}>
               <input
-                value={this.state.ggg}
+                value={this.state.Search}
                 onChange={this.handleForm}
                 className="form-control me-2 " type="search" placeholder="Search" aria-label="Search"
               />
