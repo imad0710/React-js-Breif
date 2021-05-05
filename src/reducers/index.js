@@ -1,15 +1,16 @@
 import {ADD_cart} from '../types'
 
 const reminders =(state=[], action) => {
-    let reminders =[];
+    let reminders =null;
 
     if(action.type ===  ADD_cart){
         reminders = [...state, { data:action.data}] 
+        console.log("from reducers",reminders)
         return reminders
-    }
-    else{
+        }
+    else
         return state
-    }
+    
 
    
 }

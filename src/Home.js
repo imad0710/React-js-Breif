@@ -2,6 +2,9 @@
 import './App.css';
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom';
+import {connect} from 'react-redux'
+import {add_cart} from '../src/actions.js/index'
 import Searsh from './Searsh'
 
 export class Home extends Component{
@@ -54,7 +57,9 @@ export class Home extends Component{
                         </a>
                         <a className="favori" href="/favori">
                           <i className="fas fa-heart"></i>
+  
                         </a>
+                        <Link> <input type="submit" onClick={ () =>this.props.add_cart( this.state.obj)} value="Add" className="btn btn-success wh-5" width="30px"/></Link>  
                       </p>
                     </div>
                   </div>
@@ -72,6 +77,10 @@ export class Home extends Component{
               }
             }
         
-        export default Home;
+            export default connect(state => {
+              return{
+                reminders: state
+              }
+            },{add_cart})(Home);
     
         

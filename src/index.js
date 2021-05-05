@@ -6,7 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import reminders from './reducers'
-import { add_cart } from './actions.js';
 
 
 const store = createStore(reminders)

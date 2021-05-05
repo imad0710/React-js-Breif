@@ -1,6 +1,8 @@
 
 import React, { Component } from 'react'
-
+import {connect} from 'react-redux'
+import {add_cart} from '../src/actions.js/index'
+import { Link } from 'react-router-dom';
 import axios from 'axios'
 import './App.css'
 
@@ -40,6 +42,7 @@ export class Menu extends Component {
                                         <a href={'/Detail/' + res.idMeal} className="btn btn-success">show more</a>
 
                                     </p>
+                                    <Link> <input type="submit" onClick={ () =>this.props.add_cart( this.state.obj)} value="Add" className="btn btn-success wh-5" width="30px"/></Link>  
                                 </div>
                             </div>
 
@@ -54,4 +57,8 @@ export class Menu extends Component {
         )
     }
 }
-export default Menu;
+export default connect(state => {
+    return{
+      reminders: state
+    }
+  },{add_cart})(Menu);
