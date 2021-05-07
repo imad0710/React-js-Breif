@@ -22,7 +22,7 @@ export class Favorites extends Component {
     return (
       <div>
         <div className="row">
-          {table.map((resp) => (
+          {table[0].map((resp) => (
             <div className="col-md-4" key={resp.idMeal}>
               <div className="card text-white bg-secondary mb-3">
                 <img className="card-img-top" src={resp.strMealThumb} alt="" />
